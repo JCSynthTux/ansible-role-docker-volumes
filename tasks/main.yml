@@ -1,0 +1,18 @@
+---
+
+- name: Creating Docker Volumes
+  docker_volume:
+    name: "{{ item.name }}"
+    driver: "{{ item.driver | default(local) }}"
+    driver_options: "{{ item.driver_options | default(omit) }}"
+    labels: "{{ item.labels | default(omit) }}"
+    recreate: "{{ item.recreate | default(omit) }}"
+    state: present
+  with_items: "{{ docker_volumes }}"
+
+- name: Deleting Docker Volumes
+  docker_volume:
+    name: "{{ item.name }}"
+    state: absent
+  with_items: "{{ docker_volumes_deleted }}"
+
