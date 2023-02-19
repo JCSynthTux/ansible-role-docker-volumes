@@ -3,7 +3,7 @@
 - name: Creating Docker Volumes
   docker_volume:
     name: "{{ item.name }}"
-    driver: "{{ item.driver | default(local) }}"
+    driver: "{{ item.driver | default('local') }}"
     driver_options: "{{ item.driver_options | default(omit) }}"
     labels: "{{ item.labels | default(omit) }}"
     recreate: "{{ item.recreate | default(omit) }}"
