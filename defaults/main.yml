@@ -1,8 +1,21 @@
 ---
 
 # List Of Docker Volumes To Create
+# Example
+#   docker_volumes:
+#     - name: foo
+#       driver_options:
+#         type: tmpfs
+#         device: tmpfs
+#     - name: bar
+#     - name: foobar
+#       driver: some_driver
 docker_volumes: []
 
 # List Of Docker Volumes To Remove
+# Example
+#   docker_volumes_deleted:
+#     - name: foo
+#     - name: bar
 docker_volumes_deleted: []
 
