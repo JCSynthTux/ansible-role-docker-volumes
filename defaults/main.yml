@@ -1,0 +1,8 @@
+---
+
+# List Of Docker Volumes To Create
+docker_volumes: []
+
+# List Of Docker Volumes To Remove
+docker_volumes_deleted: []
+
